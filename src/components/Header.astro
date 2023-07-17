@@ -2,20 +2,98 @@
 
 ---
 
-<header>
+<header class="header">
   <div class="icon">
-    <img src="../assets/logo.svg" alt="logo">
+    <img src="../assets/images/logo.svg" alt="logo">
   </div>
-  <ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">New</a></li>
-    <li><a href="">Popular</a></li>
-    <li><a href="">Trending</a></li>
-    <li><a href="">Categories</a></li>
+  <div class="hamburger">
+    <img src="../assets/images/icon-menu.svg" alt="hamburger">
+  </div>
+  <ul class="list-items">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">New</a></li>
+    <li><a href="#">Popular</a></li>
+    <li><a href="#">Trending</a></li>
+    <li><a href="#">Categories</a></li>
   </ul>
 </header>
 
+<style>
+  .icon {
+    width: 50px;
+  }
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  li a {
+    font-weight: 600;
+    color: var(--dark-blue-clr);
+    transition: color 150ms ease-in;
+  }
+
+  li a:hover {
+    color: var(--red-clr);
+  }
+  
+
+  .list-items {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 8rem 0 0 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 70%;
+    background-color: var(--white-clr);
+    transform: translateX(-400px);
+    transition: transform 300ms ease-in-out;
+  }
+
+  /* Navigation expanded */
+  .header.expanded .list-items {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .header.expanded .hamburger > img {
+    content: url('../assets/images/icon-menu-close.svg');
+  }
+
+  @media(min-width: 800px){
+
+    header {
+      margin-block: 3rem 2rem;
+    }
+    .hamburger {
+      display: none;
+    }
+
+    .list-items {
+      display: flex;
+      position: static;
+      transform: translateX(0);
+      height: auto;
+      width: auto;
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+</style>
 		
 		
 		

@@ -1,8 +1,8 @@
 @font-face {
   font-family: Inter;
-  src: url('../font/Inter-Bold.ttf');
-  src: url('../font/Inter-ExtraBold.ttf');
-  src: url('../font/Inter-Regular.ttf');
+  src: url('../assets/fonts/static/Inter-Bold.ttf');
+  src: url('../assets/fonts/static/Inter-ExtraBold.ttf');
+  src: url('../assets/fonts/static/Inter-Regular.ttf');
 }
 
 *, *::after, *::before {
@@ -19,13 +19,26 @@
   --gray-clr: hsl(233, 8%, 79%);
   --dark-gray-clr: hsl(236, 13%, 42%);
   --dark-blue-clr: hsl(240, 100%, 5%);
-  
+
 }
 
 body {
   font-family: Inter, sans-serif;
   line-height: 1.3;
 
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

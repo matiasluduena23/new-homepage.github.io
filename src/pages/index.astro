@@ -1,9 +1,13 @@
 ---
+import '../style/global.css'
+
+import Header from '../components/Header.astro';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -12,9 +16,10 @@
 	<body>
 		
 		<div class="container">
+			<Header />
 			<main>
 				<div class="col-1">
-					<img src="../assets/image-web-3-mobile.jpg" alt="color-image">
+					<img src="../assets/images/image-web-3-mobile.jpg" alt="color-image">
 					<div class="grid">
 						<h1>The Bright Future of Web 3.0?</h1>
 						<div class="wrap-text">
@@ -30,17 +35,9 @@
 			</main>
 		</div>
 
-
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
+		<script>
+			import '../scripts/navigation.js'
+		</script>
 	
 	</body>
 </html>
