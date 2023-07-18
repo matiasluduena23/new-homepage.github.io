@@ -30,6 +30,46 @@
   </div>
 </div>
 
+<style>
+  .grid {
+    display: grid;
+    
+    gap: 2.5rem;
+    margin-block: 3rem;
+  }
+
+  .card {
+    display: flex;
+    gap: 1rem;
+  }
+
+  img {
+    width: 80px;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gray-clr);
+  }
+
+  h4 {
+    margin-block: 0.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--dark-gray-clr);
+  }
+
+  @media(min-width: 900px){
+    .grid {
+      padding-top: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
 
 
 
