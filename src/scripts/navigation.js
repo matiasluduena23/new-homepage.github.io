@@ -1,10 +1,14 @@
 const hamburger = document.querySelector('.hamburger');
 const header = document.querySelector('.header');
+const listItems = document.querySelectorAll('.item');
 
 hamburger.addEventListener('click', ()=> {
   header.classList.toggle('expanded');
 })
 
-// close the navigation when the screen resize up to 800px 
+listItems.forEach((item) => item.addEventListener('click', () => {
+      header.classList.remove('expanded');
+}))
+
 
 
